@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>信息编辑</h2>
+    <form action="/update">
+        <p>
+            <input type="hidden" id="id" name="id"  value="<%=supplier.id%>">
+        </p>
+        <p>
+            供应商名称：<input type="text" id="sn" name="sn" value="<%=supplier.supplier_name%>">
+        </p>
+        <p>
+            地      址：<input type="text" id="sa" name="sa" value="<%=supplier.supplier_address%>">
+        </p>
+        <p>
+            电      话：<input type="text" id="te" name="te" value="<%=supplier.telephone%>">
+        </p>
+        <p>
+            银 行 名 字：<input type="text" id="bn" name="bn" value="<%=supplier.bank_name%>">
+        </p>
+        <p>
+            银 行 账 号：<input type="text" id="ba" name="ba" value="<%=supplier.bank_account%>">
+        </p>
+        <p>
+            银 行 行 号：<input type="text" id="bc" name="bc" value="<%=supplier.bank_code%>">
+        </p>
+        <p>
+            统一信用代码：<input type="text" id="scc" name="scc" value="<%=supplier.social_credit_code%>">
+        </p>
+        <p>
+            联  系  人：<input type="text" id="pe" name="pe" value="<%=supplier.person%>">
+        </p>
+        <p>
+            电     话：<input type="text" id="pn" name="pn" value="<%=supplier.phone_number%>">
+        <p>
+            <input type="submit" value="提交">
+        </p>
+    </form>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>供应商信息</h2>
+    <p>
+        供应商名称：<input type="text" id="suppliername" name="suppliername" value="<%=searchname%>">
+        <button onclick="search()">搜索</button>
+        <a href="/increase">新增</a>
+    </p>
+    <table border="1">
+        <tr>
+            <th>序号</th><th>供应商名称</th><th>地址</th><th>电话</th><th>银行名字</th><th>银行账号</th><th>银行行号</th><th>统一信用代码</th><th>联系人</th><th>电话</th><th>操作</th>
+        </tr>
+        <%
+            for(let i=0;i<res.length;i++){
+        %>  
+        <tr>
+            <td>
+                <%=res[i].id%>
+            </td>
+            <td>
+                <%=res[i].supplier_name%>
+            </td>
+            <td>
+                <%=res[i].supplier_address%>
+            </td>
+            <td>
+                <%=res[i].telephone%>
+            </td>
+            <td>
+                <%=res[i].bank_name%>
+            </td>
+            <td>
+                <%=res[i].bank_account%>
+            </td>
+            <td>
+                <%=res[i].bank_code%>
+            </td>
+            <td>
+                <%=res[i].social_credit_code%>
+            </td>
+            <td>
+                <%=res[i].person%>
+            </td>
+            <td>
+                <%=res[i].phone_number%>
+            </td>
+            <td>
+                <a href="/editstu?supplier_name=<%=res[i].supplier_name%>">编辑</a>
+            </td>
+        </tr>
+        <%
+            }
+
+        %>
+        
+    </table>
+    <script src="/js/jquery-1.12.4.js"></script>
+    <script>
+        function search(){
+            location.href = '/getstudents?suppliername='+$("#suppliername").val();
+
+        }
+
+        
+    </script>
+</body>
+</html>
